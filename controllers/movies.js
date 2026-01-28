@@ -54,7 +54,7 @@ module.exports.getMovie = async (req, res) => {
 
     try {
 
-        const retrieveMovie = await Movies.findById(req.params.id);
+        const retrieveMovie = await Movies.findById(	req.params.id);
 
         if (retrieveMovie) {
 

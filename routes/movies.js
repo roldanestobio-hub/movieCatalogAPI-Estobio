@@ -7,9 +7,9 @@ const router = express.Router();
 
 router.post('/addMovie', verify, verifyAdmin, movieController.addMovie);
 
-router.get('/getMovies', verify, movieController.getAllMovie);
+router.get('/getMovies', movieController.getAllMovie);
 
-router.get('/getMovie/:id', verify, movieController.getMovie);
+router.get('/getMovie/:id', movieController.getMovie);
 
 router.patch('/updateMovie/:id', verify, verifyAdmin, movieController.updateMovie)
 
