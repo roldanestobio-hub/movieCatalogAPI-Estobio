@@ -54,11 +54,11 @@ module.exports.getMovie = async (req, res) => {
 
     try {
 
-        const retrieveMovies = await Movies.find({_id: req.params.id});
+        const retrieveMovie = await Movies.findById(req.params.id);
 
-        if (retrieveMovies) {
+        if (retrieveMovie) {
 
-            return res.status(200).send(retrieveMovies);
+            return res.status(200).send(retrieveMovie);
 
         } else {
 

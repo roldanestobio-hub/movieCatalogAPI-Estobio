@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.post('/addMovie', verify, verifyAdmin, movieController.addMovie);
 
-router.get('/getMovies', verify, verifyAdmin, movieController.getAllMovie);
+router.get('/getMovies', verify, movieController.getAllMovie);
 
 router.get('/getMovie/:id', verify, movieController.getMovie);
 
